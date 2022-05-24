@@ -13,8 +13,8 @@
 
                 this.el.addEventListener('click', function (e) {
 		
-                    let dragon = document.querySelector('#univers-model')
-		    dragon.setAttribute('animation-mixer', "clip: Scene; loop: once;");
+                    let univers = document.querySelector('#univers-model')
+		    univers.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			
                   console.log(e)
@@ -49,8 +49,8 @@
 		
                 this.el.addEventListener('animation-finished', function (e) {
 			 console.log(e)
-                    let dragon = document.querySelector('#univers-model')
-		    dragon.removeAttribute('animation-mixer');
+                    let univers = document.querySelector('#univers-model')
+		    univers.removeAttribute('animation-mixer');
                 }.bind(this));
 		
             }
@@ -62,7 +62,7 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item id="univers" response-type="arraybuffer" src="./dragon.glb"></a-asset-item>
+        <a-asset-item id="Univers" response-type="arraybuffer" src="./univers.glb"></a-asset-item>
         <audio id="Univers" src="./assets/Univers.mp3"></audio>
       </a-assets>
       <a-entity event-listener id="univers-model"  
