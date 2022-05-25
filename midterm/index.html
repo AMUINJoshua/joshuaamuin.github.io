@@ -10,11 +10,11 @@
     window.onload = function() {
         AFRAME.registerComponent('event-listener', {
             init: function () {
-                this.audio = document.querySelector("Univers");
+                this.audio = document.querySelector("#Univers");
 
                 this.el.addEventListener('click', function (e) {
 		
-                    let univers = document.querySelector('univers-model')
+                    let univers = document.querySelector('#univers-model')
 		    univers.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			
@@ -37,7 +37,7 @@
                 }.bind(this));
                 this.el.addEventListener('touchstart', function (e) {
 		
-                    let univers = document.querySelector('univers-model')
+                    let univers = document.querySelector('#univers-model')
 		    univers.setAttribute('animation-mixer', "clip: Scene; loop: once;");
                     this.audio.play();
 			console.log(e)
