@@ -10,7 +10,7 @@
     window.onload = function() {
         AFRAME.registerComponent('event-listener', {
             init: function () {
-                this.audio = document.querySelector("#Universe");
+                this.audio = document.querySelector("#basketball");
 
                 this.el.addEventListener('click', function (e) {
 		
@@ -63,8 +63,8 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item id="ring" response-type="arraybuffer" src="ring.glb"></a-asset-item>
-        <audio id="Universe" src="assets/Universe.mp3"></audio>
+        <a-asset-item id="ring" response-type="arraybuffer" src="midterm/ring.glb"></a-asset-item>
+        <audio id="basketball" src="midterm/assets/basketball.mp3"></audio>
       </a-assets>
       <a-entity event-listener id="ring-model"  
         gltf-model="#ring" 
@@ -73,7 +73,7 @@
         rotation="0 0 0" 
       >
       </a-entity>
-      <a-sound src="#Universe" autoplay="false"></a-sound>
+      <a-sound src="#basketball" autoplay="false"></a-sound>
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity cursor="fuse: true; fuseTimeout: 500"></a-entity>
     </a-scene>
