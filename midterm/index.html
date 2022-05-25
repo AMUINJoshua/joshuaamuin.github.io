@@ -63,12 +63,12 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item url="univers" response-type="arraybuffer" url="univers.glb"></a-asset-item>
-        <audio id="Univers" url="assets/Univers.mp3"></audio>
+        <a-asset-item id="univers" response-type="arraybuffer" url="./univers.glb"></a-asset-item>
+        <audio id="Univers" url="./assets/Univers.mp3"></audio>
       </a-assets>
       <a-entity event-listener id="univers-model"  
         gltf-model="#univers" 
-        scale=".5 .5 .5" 
+        scale="5 5 5" 
         position = "0 0 0" 
         rotation="0 0 0" 
       >
